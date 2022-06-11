@@ -21,9 +21,10 @@ class UpdateUserForm(forms.ModelForm):
 
 
 class UpdateUserProfileForm(forms.ModelForm):
+    # profile_picture = ImageField(label='')
     class Meta:
         model = Profile
-        fields = ['name', 'location', 'profile_picture', 'bio', 'contact']
+        fields = ['name', 'location', 'profile_picture', 'bio', 'email']
 
 
 class RatingsForm(forms.ModelForm):
