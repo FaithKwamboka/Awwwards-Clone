@@ -70,7 +70,14 @@ INSTALLED_APPS = [
     'awwwards',
     'rest_framework',
     'bootstrap4',
+    'pyuploadcare.dj',
+    'crispy_forms',  #django-crispy-forms provides you with a |crispy filter and {% crispy %} tag that will let you control the rendering behavior of your Django forms in a very elegant and DRY way. Have full control without writing custom form templates. 
 ]
+
+UPLOADCARE = {
+    'pub_key': '9de4ac22ed1703847fa9',
+    'secret': 'ff1dbd68f42f83f10ca9',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -143,14 +150,16 @@ USE_TZ = True
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = 'static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Media Files
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type
