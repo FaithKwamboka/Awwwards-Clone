@@ -4,6 +4,10 @@
 # Awwwards
 This is an app that allows users to post a project he/she has created and get it reviewed by his/her peers.
 
+![awards](https://user-images.githubusercontent.com/100117264/173208417-0fb749f1-3f40-492a-917d-ebd0767b0c84.png)
+
+
+![awwards](https://user-images.githubusercontent.com/100117264/173208425-39c54973-3cc7-4ebf-8339-5d35c2c1b493.png)
 
 ## User Stories
 As a user of the application, I would like to:
