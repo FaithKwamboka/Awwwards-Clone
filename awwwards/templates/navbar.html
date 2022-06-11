@@ -27,7 +27,7 @@
                        aria-haspopup="true"
                        aria-expanded="false">{{ user.username|title }} <img class="rounded-circle nav-img"
                                                                             src="{{ user.profile.profile_picture.url }}"
-                                                                            alt="" height="50" width="50">
+                                                                            alt="" height="40" width="40">
                     </a>
                     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item text-center" href="{% url 'profile' user.username %}">Profile</a>

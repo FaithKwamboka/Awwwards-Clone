@@ -43,7 +43,7 @@
                             <div class="box-info">
                                 <div class="row mx-auto D-block">
                                     <h2 class="heading-large"><a href="{% url 'project' random_post.title %}"
-                                                                 style="margin-top:-100px;">{{ random_post.title }}</a>
+                                                                 style="margin-top:-100px; color:white; font-weight:bold;">{{ random_post.title }}</a>
                                     </h2>
                                 </div>
                                 
@@ -55,10 +55,10 @@
                                 </div><br><br>
                                 {% for rating in random_post.ratings.all %}
                                 {% if forloop.counter is random_post.ratings.all.count %}
-                                <button type="button" class="btn btn-info btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center;">DESIGN {{rating.design_average}}</button>
-                                <button type="button" class="btn btn-light btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center;">USABILITY {{rating.usability_average}}</button>
-                                <button type="button" class="btn btn-primary btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center;">CONTENT {{rating.content_average}}</button>
-                                <button type="button" class="btn btn-dark btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center;">SCORE {{rating.score}}</button>
+                                <button type="button" class="btn btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center; border: 5px solid blue;">DESIGN {{rating.design_average}}</button>
+                                <button type="button" class="btn btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center; border: 5px solid green;">USABILITY {{rating.usability_average}}</button>
+                                <button type="button" class="btn btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center; border: 5px solid red;">CONTENT {{rating.content_average}}</button>
+                                <button type="button" class="btn btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center; border: 5px solid yellow;">OVERALL {{rating.score}}</button>
                                 {% endif %}
                                 {% endfor %}
                                <br><br><br> 
@@ -77,7 +77,7 @@
     </div>
 
     <div class="container">
-        <h2 class="mt-4" style="color: black; font-weight:40px;">Websites available</h2><br>
+        <h2 class="mt-4" style="color: black; font-weight:40px;">Websites Submitted</h2><br>
         {% if user.is_authenticated %}
         <div class="modal fade bd-example-modal-xl" id="ModalCenter" tabindex="-1" role="dialog"
              aria-labelledby="exampleModalCenterTitle"
@@ -104,12 +104,13 @@
         </div>
         {% endif %}
 
+
         <div class="row">
             {% if posts %}
 
             <div class="templates display">
                 {% for post in posts %}
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                     <div class="card">
                         <div class="view overlay">
                             <img class="card-img-top" src="{{ post.photo.cdn_url }}"
@@ -130,7 +131,7 @@
 
                             </p>
                         </div>
-                    </div>
+                    </div><br>
                 </div>
                 {% endfor %}
             </div>
