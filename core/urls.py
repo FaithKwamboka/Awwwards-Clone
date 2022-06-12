@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
+from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +27,7 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('logout/', auth_views.logout_then_login),
+    path('api-token-auth/', obtain_auth_token),
 ]
 
 if settings.DEBUG:
