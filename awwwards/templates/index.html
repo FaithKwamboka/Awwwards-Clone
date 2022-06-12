@@ -15,12 +15,12 @@
 {% block content %}
 
 <div style="margin-top:0%; color:white;">
-    <div class="container-fluid" style="background-image:url('static/images/marble-studio-cover.jpg'); height:500px;">
+    <div class="container-fluid" style="background-image:url('static/images/marble-studio-cover.jpg'); height:530px;">
         <!DOCTYPE html>
         <html class="no-js" lang="en">
         <body class="home" data-debug="0">
 
-        <section id="content"><br>
+        <section id="content"><br><br>
           <div class="box-left">
             <strong class="parent">
                 <a href="{% url 'project' random_post.title %}" style="margin-left:20px;">Site of the day </a>
@@ -58,7 +58,7 @@
                                 <button type="button" class="btn btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center; border: 5px solid blue;">DESIGN {{rating.design_average}}</button>
                                 <button type="button" class="btn btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center; border: 5px solid green;">USABILITY {{rating.usability_average}}</button>
                                 <button type="button" class="btn btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center; border: 5px solid red;">CONTENT {{rating.content_average}}</button>
-                                <button type="button" class="btn btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center; border: 5px solid yellow;">OVERALL {{rating.score}}</button>
+                                <button type="button" class="btn btn-circle btn-xl" style="width: 100px; height: 100px; padding: 10px 16px; border-radius: 35px; font-size: 12px; text-align: center; border: 5px solid lightblue;">OVERALL {{rating.score}}</button>
                                 {% endif %}
                                 {% endfor %}
                                <br><br><br> 
@@ -77,7 +77,7 @@
     </div>
 
     <div class="container">
-        <h2 class="mt-4" style="color: black; font-weight:40px;">Websites Submitted</h2><br>
+        <h2 class="mt-4" style="color: black; font-weight:40px;">Available Websites</h2><br>
         {% if user.is_authenticated %}
         <div class="modal fade bd-example-modal-xl" id="ModalCenter" tabindex="-1" role="dialog"
              aria-labelledby="exampleModalCenterTitle"
