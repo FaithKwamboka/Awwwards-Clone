@@ -76,8 +76,8 @@ INSTALLED_APPS = [
 ]
 
 UPLOADCARE = {
-    'pub_key': '9de4ac22ed1703847fa9',
-    'secret': 'ff1dbd68f42f83f10ca9',
+    'pub_key': config('PUB_KEY'),
+    'secret': config('SECRET'),
 }
 
 MIDDLEWARE = [
