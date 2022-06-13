@@ -44,7 +44,10 @@ class PostViewSet(viewsets.ModelViewSet):
 
 @login_required(login_url='/accounts/login')
 def profile(request, username):
-    return render(request, 'profile.html')
+    current_user = request.user
+    user = current_user
+    posts = Post.search_by_user(user)
+    return render(request, 'profile.html',{'posts':posts})
 
 
 def user_profile(request, username):

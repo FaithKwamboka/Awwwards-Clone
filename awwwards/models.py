@@ -48,6 +48,11 @@ class Post(models.Model):
     @classmethod
     def search_project(cls, title):
         return cls.objects.filter(title__icontains=title).all()
+    
+    @classmethod
+    def search_by_user(cls, user):
+        posts = cls.objects.filter(user=user)
+        return posts
 
     @classmethod
     def all_posts(cls):
